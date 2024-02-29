@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import { signIn } from "next-auth/client";
+import { signIn } from "next-auth/react";
 import classes from "./auth-form.module.css";
 
 const createUser = async (email, password) => {
@@ -44,7 +44,6 @@ function AuthForm() {
         email: enteredEmail,
         password: enteredPassword,
       });
-
       console.log(result);
     } else {
       try {
